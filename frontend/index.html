@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI as a Critic</title>
+    <!-- Importing modern, editorial fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600&family=Inter:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="art-layer bg-texture"></div>
+    <div class="art-layer dark-overlay"></div>
+    <div class="art-layer focal-shape"></div>
+    <img src="assets/statue.png" alt="Philosophical Figure" class="statue-graphic">
+
+    <!-- <nav class="navigation">
+        <div class="nav-links">
+            <a href="#">ABOUT</a>
+            <a href="#">COMMUNITY</a>
+            <a href="#">NEWSLETTER</a>
+        </div>
+    </nav> -->
+
+    <div class="logo-mark">
+        <svg viewBox="0 0 100 100" width="30" height="30">
+            <path d="M20,50 Q40,20 60,50 T100,50" fill="none" stroke="#1A1A1A" stroke-width="3" />
+            <circle cx="80" cy="50" r="4" fill="#E85D04" />
+        </svg>
+    </div>
+
+    <main class="container">
+        <!-- Input State -->
+        <section id="input-section" class="active">
+            <h1 class="main-heading">Self-knowledge</h1>
+            <p class="sub-heading">is the most important subject<br>we never learnt.</p>
+
+            <form id="critique-form" class="input-form">
+                <textarea id="statement-input"
+                    placeholder="Enter your philosophical thought, argument, or perspective..." rows="3"
+                    required></textarea>
+                <div class="submit-wrapper">
+                    <button type="submit" id="submit-btn" class="editorial-btn">
+                        <span>A N A L Y Z E</span>
+                        <svg class="arrow-right" width="40" height="12" viewBox="0 0 40 12">
+                            <line x1="0" y1="6" x2="38" y2="6" stroke="#E63946" stroke-width="1" />
+                            <polyline points="34,2 38,6 34,10" fill="none" stroke="#E63946" stroke-width="1" />
+                        </svg>
+                    </button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Loading State -->
+        <section id="loading-section" class="hidden">
+            <div class="loading-indicator">
+                <div class="pulse-circle"></div>
+                <p>Contemplating...</p>
+            </div>
+        </section>
+
+        <!-- Results State -->
+        <section id="results-section" class="hidden">
+            <div class="results-header">
+                <h2>The Critique</h2>
+                <div class="strength-score">
+                    <span id="score-value">0%</span>
+                    <span class="score-label">Argument Strength</span>
+                </div>
+            </div>
+
+            <div class="results-grid">
+                <div class="result-card" id="logic-card">
+                    <h3>Logical Framing</h3>
+                    <ul id="logic-list"></ul>
+                </div>
+
+                <div class="result-card highlight-card" id="philosophy-card">
+                    <h3>Philosophical Insights</h3>
+                    <div id="philosophy-content"></div>
+                </div>
+
+                <div class="result-card" id="evidence-card">
+                    <h3>Missing Context & Evidence</h3>
+                    <ul id="evidence-list"></ul>
+                </div>
+
+                <div class="result-card" id="prompts-card">
+                    <h3>Points for Reflection</h3>
+                    <ul id="prompts-list" class="socratic-list"></ul>
+                </div>
+            </div>
+
+            <button id="reset-btn" class="text-btn">Return to emptiness</button>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
