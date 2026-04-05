@@ -25,8 +25,8 @@ flowchart TD
     G --> I
     H --> I
     I --> J[Compute Argument Strength]
-    J --> K[JSON Feedback]``` 
-
+    J --> K[JSON Feedback]
+```
 ## Installation
 
 Clone the repository and install dependencies:
